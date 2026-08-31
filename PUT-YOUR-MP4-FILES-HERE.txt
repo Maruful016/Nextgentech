@@ -1,1 +1,0 @@
-Upload your .mp4 video files into this folder, then add a video card in videos.html. Example file names: welcome.mp4, product-showcase.mp4, project-demo.mp4
