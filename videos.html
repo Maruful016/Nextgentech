@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NextGenTech video portfolio and media gallery.">
+<title>Videos | NextGenTech</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><span>Next</span>GenTech</a>
+  <button class="menu-toggle" aria-label="Menu">☰</button>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="skills.html">Skills</a>
+    <a href="services.html">Services</a><a href="projects.html">Projects</a>
+    <a href="videos.html">Videos</a><a href="shop.html">Shop</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="header-actions"><button class="theme-toggle" title="Theme">☾</button><a class="cart-link" href="shop.html">🛒 <b id="cartCount">0</b></a></div>
+</header>
+
+<main>
+<section class="inner-hero page-pad">
+  <span class="kicker">NEXTGENTECH MEDIA</span>
+  <h1>My videos, <em>all in one place.</em></h1>
+  <p>Showcase tutorials, product videos, project demos, promotional videos and other NextGenTech content.</p>
+  <div class="actions">
+    <a class="btn primary" href="#videoGallery">Watch Videos ↓</a>
+    <a class="btn ghost" href="contact.html">Collaborate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="video-toolbar">
+    <div>
+      <span class="kicker">VIDEO LIBRARY</span>
+      <h2>Watch, explore & <em>discover.</em></h2>
+    </div>
+    <input id="videoSearch" class="video-search" placeholder="Search videos...">
+  </div>
+
+  <div class="media-tabs">
+    <button class="media-tab active" data-media-filter="all">All</button>
+    <button class="media-tab" data-media-filter="product">Products</button>
+    <button class="media-tab" data-media-filter="project">Projects</button>
+    <button class="media-tab" data-media-filter="tutorial">Tutorials</button>
+    <button class="media-tab" data-media-filter="youtube">YouTube</button>
+  </div>
+
+  <div class="video-grid" id="videoGallery">
+    <article class="video-card reveal" data-title="Welcome to NextGenTech" data-media="tutorial">
+      <div class="video-frame">
+        <video controls preload="metadata" poster="">
+          <source src="assets/videos/welcome.mp4" type="video/mp4">
+        </video>
+        <button class="expand-video" data-video="assets/videos/welcome.mp4" data-title="Welcome to NextGenTech" aria-label="Open fullscreen video">⛶</button>
+        <span class="video-badge">FEATURED</span>
+      </div>
+      <div class="video-info"><small>TUTORIAL</small><h3>Welcome to NextGenTech</h3><p>Replace the placeholder video with your own content.</p></div>
+    </article>
+
+    <article class="video-card reveal" data-title="Electronics Product Showcase" data-media="product">
+      <div class="video-frame">
+        <video controls preload="metadata">
+          <source src="assets/videos/product-showcase.mp4" type="video/mp4">
+        </video>
+        <button class="expand-video" data-video="assets/videos/product-showcase.mp4" data-title="Electronics Product Showcase" aria-label="Open fullscreen video">⛶</button>
+        <span class="video-badge">PRODUCT</span>
+      </div>
+      <div class="video-info"><small>ELECTRONICS</small><h3>Electronics Product Showcase</h3><p>Use this card for product promotion and demo videos.</p></div>
+    </article>
+
+    <article class="video-card reveal" data-title="Project Demo" data-media="project">
+      <div class="video-frame">
+        <video controls preload="metadata">
+          <source src="assets/videos/project-demo.mp4" type="video/mp4">
+        </video>
+        <button class="expand-video" data-video="assets/videos/project-demo.mp4" data-title="Project Demo" aria-label="Open fullscreen video">⛶</button>
+        <span class="video-badge">PROJECT</span>
+      </div>
+      <div class="video-info"><small>PORTFOLIO</small><h3>Project Demo</h3><p>Show your web app, dashboard or automation projects.</p></div>
+    </article>
+
+    <article class="video-card reveal" data-title="YouTube Channel Video" data-media="youtube">
+      <div class="video-frame embed-frame">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" allowfullscreen loading="lazy"></iframe>
+        <span class="video-badge">YOUTUBE</span>
+      </div>
+      <div class="video-info"><small>YOUTUBE</small><h3>YouTube Channel Video</h3><p>Replace <code>VIDEO_ID</code> with your real YouTube video ID.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="section social-media-video">
+  <div class="section-head">
+    <span class="kicker">SOCIAL VIDEO</span>
+    <h2>YouTube, Facebook & <em>more.</em></h2>
+    <p class="muted">For social platforms, paste the official embed code or video URL into a card. The page is ready for multiple platforms.</p>
+  </div>
+  <div class="feature-grid three">
+    <article><span>▶</span><h3>YouTube</h3><p>Embed public YouTube videos directly into your gallery.</p></article>
+    <article><span>f</span><h3>Facebook</h3><p>Add Facebook video embeds when the post/video allows embedding.</p></article>
+    <article><span>◎</span><h3>Short Videos</h3><p>Use MP4 files for reels, product clips and short tutorials.</p></article>
+  </div>
+</section>
+
+<div class="video-modal" id="videoModal" aria-hidden="true">
+  <div class="video-modal-backdrop" data-close-video></div>
+  <div class="video-modal-box">
+    <button class="video-close" data-close-video aria-label="Close">×</button>
+    <h3 id="modalVideoTitle">Video</h3>
+    <video id="modalVideo" controls playsinline></video>
+  </div>
+</div>
+</section>
+
+<section class="section video-upload-guide">
+  <div class="upload-guide-card">
+    <span class="kicker">HOW TO ADD VIDEOS</span>
+    <h2>Add unlimited videos <em>to your gallery.</em></h2>
+    <p>Because GitHub Pages is a static hosting service, visitors cannot upload files directly into your website. To publish a new MP4 video, upload the file to <b>assets/videos/</b> in GitHub and add another video card in <b>videos.html</b>. You can also embed public YouTube/Facebook videos using their supported embed code.</p>
+    <div class="guide-steps">
+      <div><b>01</b><span>Prepare an MP4 video</span></div>
+      <div><b>02</b><span>Upload it to <code>assets/videos/</code></span></div>
+      <div><b>03</b><span>Copy a video card and change title/file name</span></div>
+      <div><b>04</b><span>Commit changes — it becomes live</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="kicker">CONTENT TYPES</span>
+    <h2>Use this page for <em>everything.</em></h2>
+  </div>
+  <div class="feature-grid three">
+    <article><span>▶</span><h3>Product Videos</h3><p>Show electronics, features, unboxing and product demonstrations.</p></article>
+    <article><span>⌘</span><h3>Project Demos</h3><p>Present your websites, apps, dashboards and automation projects.</p></article>
+    <article><span>✦</span><h3>Tutorials & Reels</h3><p>Keep educational videos, tips and promotional content together.</p></article>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div><a class="brand" href="index.html"><span>Next</span>GenTech</a><p>Smart technology. Better solutions.</p></div>
+  <div class="footer-links"><a href="shop.html">Electronics Shop</a><a href="projects.html">Portfolio</a><a href="contact.html">Contact</a></div>
+  <p>© <span id="year"></span> NextGenTech. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+<script>
+const vs=document.getElementById('videoSearch');
+const vc=document.querySelectorAll('.video-card');
+vs?.addEventListener('input',()=>{const q=vs.value.toLowerCase();vc.forEach(c=>c.style.display=c.dataset.title.toLowerCase().includes(q)?'':'none')});
+</script>
+</body></html>
